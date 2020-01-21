@@ -1,0 +1,47 @@
+/* ------------------------------ */
+/* Navigation */
+/* ------------------------------ */
+/* Large */
+.navigation {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+/* Medium screens */
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+
+/* Small screens */
+@media all and (max-width: 500px) {
+  .navigation {
+    flex-direction: column;
+  }
+}
+
+/* ------------------------------ */
+/* Default Values */
+/* ------------------------------ */
+* {
+  margin: 0;
+} 
+
+html, body {
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Oswald', sans-serif;
+}
+
+/* ------------------------------ */
+/* Container */
+/* ------------------------------ */
+.container {
+  background-color: whitesmoke;
+  height: 100vh;
+}
