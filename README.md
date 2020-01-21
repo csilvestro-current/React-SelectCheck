@@ -1,2 +1,2 @@
-# React-MyBoilerPlate
-Simple app layout with routing
+# React-Mulitple Inputs, Checkboxes, Selects
+
