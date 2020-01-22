@@ -25,11 +25,11 @@ class Checkbox extends Component {
   addShirt = e => {
     console.log(this.state.acceptedAgreement)
     e.preventDefault();
-    const { name, size, color, acceptedAgreement } = this.state;
-    localStorage.setItem('size', size);
-    localStorage.setItem('color', color);
-    localStorage.setItem('acceptedAgreement', acceptedAgreement);
-    localStorage.setItem('name', acceptedAgreement ? name : '');
+    // const { name, size, color, acceptedAgreement } = this.state;
+    // localStorage.setItem('size', size);
+    // localStorage.setItem('color', color);
+    // localStorage.setItem('acceptedAgreement', acceptedAgreement);
+    // localStorage.setItem('name', acceptedAgreement ? name : '');
   };
 
   render() {
