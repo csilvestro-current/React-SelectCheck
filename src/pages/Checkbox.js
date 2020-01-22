@@ -9,6 +9,12 @@ class Checkbox extends Component {
     acceptedAgreement: false
   };
 
+  componentDidMount() {
+  //   const acceptedAgreement = localStorage.getItem('acceptedAgreement') === 'true';
+  //   const name = acceptedAgreement ? localStorage.getItem('name') : '';
+  //   this.setState({ name, acceptedAgreement });
+  }
+
   onChange = e => {
     const input = e.target;
     const name = input.name;
@@ -19,6 +25,11 @@ class Checkbox extends Component {
   addShirt = e => {
     console.log(this.state.acceptedAgreement)
     e.preventDefault();
+    const { name, size, color, acceptedAgreement } = this.state;
+    localStorage.setItem('size', size);
+    localStorage.setItem('color', color);
+    localStorage.setItem('acceptedAgreement', acceptedAgreement);
+    localStorage.setItem('name', acceptedAgreement ? name : '');
   };
 
   render() {
