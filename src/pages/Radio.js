@@ -18,7 +18,7 @@ class Radio extends Component {
       <section className="">
         <Nav />
         <h1>Radio</h1>
-        {/* <form>
+        <form>
           <label>
             <input
               value="BEGINNER"
@@ -43,8 +43,8 @@ class Radio extends Component {
               type="radio" />
               Advanced
           </label>
-        </form> */}
-        <form>
+        </form>
+        {/* <form>
           {levels.map((level, index) =>
             <label key={index}>
               <input
@@ -55,7 +55,7 @@ class Radio extends Component {
                  {level}
             </label>
           )}
-        </form>
+        </form> */}
 
         <p>{this.state.skillLevel}</p>
       </section>
