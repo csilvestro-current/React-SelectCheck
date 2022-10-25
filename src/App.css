@@ -1,47 +1,38 @@
-/* ------------------------------ */
-/* Navigation */
-/* ------------------------------ */
-/* Large */
-.navigation {
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-/* Medium screens */
-@media all and (max-width: 800px) {
-  .navigation {
-    justify-content: space-around;
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
   }
-}
-
-/* Small screens */
-@media all and (max-width: 500px) {
-  .navigation {
-    flex-direction: column;
+  to {
+    transform: rotate(360deg);
   }
-}
-
-/* ------------------------------ */
-/* Default Values */
-/* ------------------------------ */
-* {
-  margin: 0;
-} 
-
-html, body {
-  font-family: 'Raleway', sans-serif;
-}
-
-h1 {
-  font-family: 'Raleway', sans-serif;
-  font-family: 'Oswald', sans-serif;
-}
-
-/* ------------------------------ */
-/* Container */
-/* ------------------------------ */
-.container {
-  background-color: whitesmoke;
-  height: 100vh;
 }

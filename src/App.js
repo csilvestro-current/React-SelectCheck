@@ -1,32 +1,58 @@
-import React, { Component } from 'react'
-import './App.css'
-import Routes from './components/Routes'
+import * as React from 'react';
 
-//React Router
-import { BrowserRouter } from 'react-router-dom'
+function App() {
+  const [food, setFood] = React.useState('fruit');
+  const [drink, setDrink] = React.useState('water');
 
+  const handleFoodChange = (event) => {
+    setFood(event.target.value);
+  };
 
-class App extends Component {
-  render() {
-    return (
-      <BrowserRouter>
-        <div className="container">
-        {/* Or */}
-        {/* <div style={styles.container}> */}
-          <Routes />
-        </div>
-      </BrowserRouter>
-    );
-  }
-}
+  const handleDrinkChange = (event) => {
+    setDrink(event.target.value);
+  };
 
-export default App
+return (
+  <div>
+    <p>Select using Hooks</p>
+    <Select
+        label="What do we eat?"
+        options={[
+          { label: 'Fruit', value: 'fruit' },
+          { label: 'Vegetable', value: 'vegetable' },
+          { label: 'Meat', value: 'meat' },
+        ]}
+        value={food}
+        onChange={handleFoodChange}
+      />
 
-// const styles = {
-//   container: {
-//       backgroundColor: 'gray',
-//       display: 'flex',
-//       flexDirection: 'row',
-//       height: '100vh'
-//   }
-// }
+      <Select
+        label="What do we drink?"
+        options={[
+          { label: 'Water', value: 'water' },
+          { label: 'Beer', value: 'beer' },
+          { label: 'Wine', value: 'wine' },
+        ]}
+        value={drink}
+        onChange={handleDrinkChange}
+      />
+
+      <p>We eat {food}!</p>
+      <p>We drink {drink}!</p>
+    </div>
+)}
+
+const Select = ({ label, value, options, onChange }) => {
+  return (
+    <label>
+      {label}
+      <select value={value} onChange={onChange}>
+        {options.map((option) => (
+          <option value={option.value}>{option.label}</option>
+        ))}
+      </select>
+    </label>
+  );
+};
+
+export default App;
