@@ -59,7 +59,7 @@ class Select extends Component {
           </select>
           </label>
 
-          <label>Desired color:</label>
+        <label>Desired color:</label>
           <select name="color" value={this.state.color} onChange={this.onChange}>
             <option></option>
             <option name="blue" value="blue">Blue</option>
@@ -71,11 +71,11 @@ class Select extends Component {
         </form>
         <p>{this.state.flavor}</p>
         <p>{this.state.num}</p>
-        <p>{this.state.color}</p>
+        <p>{this.state.color}</p> 
         {selectList}
         <hr />
         <h1>Form Component</h1>
-        <SelectForm title={this.state.value}/>
+        {/* <SelectForm title={this.state.value}/> */}
       </section>
     );
   }
